@@ -22,7 +22,7 @@ DEVICE_FOLDER := device/amazon/otter2
 
 # Kernel
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE := mem=1G androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := mem=1G
 TARGET_BOOTLOADER_BOARD_NAME := otter2
 TARGET_OTA_ASSERT_DEVICE := blaze_tablet,otter2
 
@@ -50,6 +50,7 @@ TARGET_RECOVERY_FSTAB = $(DEVICE_FOLDER)/fstab.otter2
 RECOVERY_FSTAB_VERSION = 2
 TARGET_RECOVERY_INITRC := $(DEVICE_FOLDER)/init.recovery.rc
 TARGET_RECOVERY_PRE_COMMAND := "/system/bin/pre-recovery.sh \#"
+BOARD_CANT_BUILD_RECOVERY_FROM_BOOT_PATCH := true
 
 # TWRP Config
 TW_INTERNAL_STORAGE_PATH := "/data/media"
